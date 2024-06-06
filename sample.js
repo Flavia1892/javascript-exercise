@@ -1,60 +1,104 @@
-// Arithmetic Operators
-const number1 = 10;
-const number2 = 7;
-const sum = number1 + number2;
-console.log(`The sum is: ${sum}`);
+//let isRaining = prompt();
 
-const number3 = 15;
-const average = (number1 + number2 + number3) / 3;
-console.log(`The average is: ${average}`);
+//isRaining = isRaining.toLowerCase() ==='false' ? false: true;
 
-// Assignment Operators
-let variableX = 12;
-variableX = variableX + 8;
-console.log(`The value of variableX is now: ${variableX}`);
+//console.log('Is currently raining', isRaining);
 
-let variableY = 20;
-variableY += 4;
-console.log(`The value of variableY is now: ${variableY}`);
+//let numberOfKidsPlayingOutside=10;
 
-// Comparison Operators
-const valueA = 25;
-const valueB = 30;
+//if(isRaining)
+// numberOfKidsPlayingOutside=2;
+//else
+// numberOfKidsPlayingOutside++;
 
-if (valueA > valueB) {
-  console.log("valueA is greater than valueB");
-} else {
-  console.log("valueB is greater than or equal to valueA");
+// console.log(numberOfKidsPlayingOutside);
+
+//Tema-curs miercuri
+
+let nr1 = 11;
+let nr2 = 15;
+let nr3 = 25;
+let x = 12;
+let y = 10;
+let varsta = 35;
+
+console.log(nr1 + nr2);
+
+function averageSum(x, y, z) {
+  let avg = 0;
+  avg = (x + y + z) / 3;
+  return avg;
 }
 
-const personAge = 17;
+console.log(averageSum(nr1, nr2, nr3));
 
-if (personAge >= 18) {
-  console.log("The person is an adult.");
-} else {
-  console.log("The person is a minor.");
+x += 5;
+console.log(x);
+
+y += 10;
+y += 2;
+console.log(y);
+
+function compareNumbers(a, b) {
+  if (a > b) console.log("A este mai mare ca B");
+  else console.log("B este mai mare ca A");
 }
 
-// Logical Operators
-const condition1 = true;
-const condition2 = false;
+compareNumbers(nr1, nr2);
 
-if (condition1 && condition2) {
-  console.log("Both conditions are true.");
-} else {
-  console.log("At least one of the conditions is not true.");
+function compareAge(a) {
+  if (a <= 18) return false;
+  else return true;
+}
+console.log("Varsta este mai mare sau egala cu 18" + " " + compareAge(varsta));
+
+function checkCondition(a, b, c) {
+  if (b > a && b > c) console.log(b + "" + "este cel mai mare numar");
+  else console.log(b + " " + "nu este cel mai mare numar");
+}
+checkCondition(nr1, nr3, nr2);
+
+function chechIf(a, b) {
+  if (a != b) console.log("true");
+  else console.log("a este egal cu b");
+}
+chechIf(nr1, nr2);
+
+//Conditionale si bucle exercitii
+function oneDo(x) {
+  let i = 1;
+  do {
+    console.log(i);
+    i++;
+  } while (i <= x);
 }
 
-const condition = true;
+oneDo(10);
 
-if (!condition) {
-  console.log("The condition is true.");
-} else {
-  console.log("The condition is not true.");
+function showEven(x) {
+  for (let i = 2; i <= x; i++) {
+    if (i % 2 === 0) console.log(i + " " + "numar par");
+  }
 }
 
+showEven(20);
 
+let num1 = parseInt(prompt());
+let num2 = parseInt(prompt());
 
-//ahahahahaha
+function showNum(a, b) {
+  if (a < b) for (let i = a; i <= b; i++) console.log(i);
+  else for (let i = b; i <= a; i++) console.log(i);
+}
 
+showNum(num1, num2);
 
+//ultimul exercitiu
+
+let numar = parseInt(prompt());
+
+function showTable(x) {
+  for (let i = 1; i <= x; i++) console.log(x + "x" + i + "=" + x * i);
+}
+
+showTable(numar);
